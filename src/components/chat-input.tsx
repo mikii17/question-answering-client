@@ -102,7 +102,7 @@ const ChatContext = () => {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Context</DialogTitle>
+          <DialogTitle>Context (Optional)</DialogTitle>
           <DialogDescription>
             Provide the specific context here.
           </DialogDescription>

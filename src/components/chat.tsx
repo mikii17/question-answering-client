@@ -14,7 +14,7 @@ export default function Chat() {
           {question || answer ? (
             <div className="w-full flex flex-col gap-5 ">
               {question ? (
-                <div className="w-[80%] space-y-2 self-end p-4 bg-gray-100 rounded-lg">
+                <div className="w-[80%] space-y-2 self-end p-4 bg-card rounded-lg">
                   <p>Q: {question}</p>
                   {context ? <p>Context: {context}</p> : null}
                 </div>
