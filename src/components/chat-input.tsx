@@ -39,7 +39,7 @@ export default function ChatInput() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ question, context }),
+          body: JSON.stringify({ question: text, context }),
         }
       );
 
