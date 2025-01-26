@@ -18,7 +18,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useAnswer } from "@/context/answer";
 
 export default function ChatInput() {
-  const { setQuestion, setContext } = useQuestion();
+  const { context, question, setQuestion, setContext } = useQuestion();
   const { setAnswer } = useAnswer();
 
   const [loading, setLoading] = useState<boolean>(false);
@@ -32,18 +32,19 @@ export default function ChatInput() {
       setAnswer("");
       setText("");
       setLoading(true);
-      // const response = await fetch("someurl", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({ question, context }),
-      // });
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch(
+        "https://mikii17-question-answering.hf.space/answers",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ question, context }),
+        }
+      );
 
-      // const data = await response.json();
-      // setAnswer(data.answer);
-      setAnswer("This is the answer");
+      const data = await response.json();
+      setAnswer(data.answer);
     } catch (error: any) {
       toast({
         title: "Error",

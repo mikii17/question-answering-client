@@ -20,7 +20,7 @@ export default function CollapsibleSidebar() {
         <CollapsibleTrigger asChild>
           <SidebarMenuButton>
             <ClipboardMinus />
-            <Link to="/report">
+            <Link to="https://docs.google.com/document/d/1zeMzxPFBoco8N1uz4h4mO9EJPgbz-B0NihZZ4GCJqcw/edit?usp=sharing">
               <span>Reports</span>
             </Link>
             {/* /   <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" /> */}
@@ -30,7 +30,7 @@ export default function CollapsibleSidebar() {
           <SidebarMenuSub>
             <SidebarMenuSubItem>
               <SidebarMenuSubButton asChild>
-                <Link to="/retreiver">
+                <Link to="https://docs.google.com/document/d/1zeMzxPFBoco8N1uz4h4mO9EJPgbz-B0NihZZ4GCJqcw/edit?usp=sharing">
                   <span>Retreiver</span>
                 </Link>
               </SidebarMenuSubButton>
@@ -38,7 +38,7 @@ export default function CollapsibleSidebar() {
 
             <SidebarMenuSubItem>
               <SidebarMenuSubButton asChild>
-                <Link to="/reader">
+                <Link to="https://docs.google.com/document/d/1zeMzxPFBoco8N1uz4h4mO9EJPgbz-B0NihZZ4GCJqcw/edit?usp=sharing">
                   <span>Reader</span>
                 </Link>
               </SidebarMenuSubButton>
