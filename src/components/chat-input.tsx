@@ -18,7 +18,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useAnswer } from "@/context/answer";
 
 export default function ChatInput() {
-  const { context, question, setQuestion, setContext } = useQuestion();
+  const { context, setQuestion, setContext } = useQuestion();
   const { setAnswer } = useAnswer();
 
   const [loading, setLoading] = useState<boolean>(false);
