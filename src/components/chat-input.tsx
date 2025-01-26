@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Send, Plus, CircleDashed } from "lucide-react";
 
 import { Button } from "./ui/button";
@@ -17,12 +18,11 @@ import { useToast } from "@/hooks/use-toast";
 import { useAnswer } from "@/context/answer";
 
 export default function ChatInput() {
-  const { setQuestion, question, context, setContext } = useQuestion();
+  const { setQuestion, setContext } = useQuestion();
   const { setAnswer } = useAnswer();
 
   const [loading, setLoading] = useState<boolean>(false);
   const [text, setText] = useState<string>("");
-  const [error, setError] = useState<string | null>(null);
 
   const { toast } = useToast();
 
@@ -44,13 +44,12 @@ export default function ChatInput() {
       // const data = await response.json();
       // setAnswer(data.answer);
       setAnswer("This is the answer");
-    } catch (error) {
+    } catch (error: any) {
       toast({
         title: "Error",
         description: error.message,
         variant: "destructive",
       });
-      setError(error.message);
     } finally {
       setLoading(false);
       setContext("");

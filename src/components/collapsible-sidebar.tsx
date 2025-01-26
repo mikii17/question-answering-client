@@ -11,7 +11,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "./ui/sidebar";
-import { ChevronRight, ClipboardMinus } from "lucide-react";
+import { ClipboardMinus } from "lucide-react";
 
 export default function CollapsibleSidebar() {
   return (

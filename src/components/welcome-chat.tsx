@@ -1,9 +1,6 @@
-import { useAnswer } from "@/context/answer";
 import { TypingAnimation } from "./ui/typing-animation";
 
 export default function WelcomeChat() {
-  const { answer } = useAnswer();
-
   return (
     <div className="text-center">
       <h2 className="text-xl font-semibold">

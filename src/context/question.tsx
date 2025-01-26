@@ -1,10 +1,17 @@
 import { createContext, useContext, useState } from "react";
 
-const initialState = {
+type QuestionProviderState = {
+  question: string;
+  setQuestion: (question: string) => void;
+  context: string;
+  setContext: (answer: string) => void;
+};
+
+const initialState: QuestionProviderState = {
   question: "",
-  setQuestion: (question: string) => {},
+  setQuestion: () => {},
   context: "",
-  setContext: (answer: string) => {},
+  setContext: () => {},
 };
 const QuestionContext = createContext<typeof initialState>(initialState);
 

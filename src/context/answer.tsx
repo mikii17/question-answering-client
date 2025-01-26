@@ -1,8 +1,12 @@
 import { createContext, useContext, useState } from "react";
 
-const initialState = {
+type AnswerProviderState = {
+  answer: string;
+  setAnswer: (answer: string) => void;
+};
+const initialState: AnswerProviderState = {
   answer: "",
-  setAnswer: (answer: string) => {},
+  setAnswer: () => {},
 };
 const AnswerContext = createContext<typeof initialState>(initialState);
 
